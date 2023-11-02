@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 def magic_calculation(a, b):
-    """This program matches bytecode provided by Holberton School."""
+    """This program matches bytecode provided"""
     from magic_calculation_102 import add, sub
 
     if a < b:
@@ -11,4 +11,4 @@ def magic_calculation(a, b):
         return (c)
 
     else:
-        return(sub(a, b))
+        return (sub(a, b))
