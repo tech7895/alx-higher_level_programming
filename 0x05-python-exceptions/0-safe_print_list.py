@@ -5,17 +5,14 @@ def safe_print_list(my_list=[], x=0):
 
     Args:
         my_list (list): The list to print elements from.
-        x (int): The number of elements of my_list to print.
-
-    Returns:
-        the number of elements printed
+        x (int): the number of elements of my_list
     """
-    ret = 0
+    tot = 0
     for i in range(x):
         try:
             print("{}".format(my_list[i]), end="")
-            ret += 1
+            tot += 1
         except IndexError:
             break
     print("")
-    return (ret)
+    return (tot)
