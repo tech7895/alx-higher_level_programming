@@ -1,31 +1,30 @@
 #!/usr/bin/python3
-
-# 0-square.py by Odoi Leonard
-"""This is a module that defines a square """
+"""Defines a class Square"""
 
 
 class Square:
-
+    """Represents a square
+    Attributes:
+        __size (int): size of a side of the square
+    """
     def __init__(self, size=0):
-        """Initializing this square class
+        """initializes the square
         Args:
-            size: This represnets the size of the square defined
-        Raises:
-            TypeError: size is not integer
-            ValueError: the size is less than zero
+            size (int): size of a side of the square
+        Returns:
+            None
         """
-
-        if not isinstance(size, int):
-            raise TypeError('size must be an integer')
-        if size < 0:
-            raise ValueError('size must be >= 0')
-
-        self.__size = size
+        if type(size) is not int:
+            raise TypeError("size must be an integer")
+        else:
+            if size < 0:
+                raise ValueError("size must be >= 0")
+            else:
+                self.__size = size
 
     def area(self):
+        """calculates the square's area
+        Returns:
+            The area of the square
         """
-        This calculates the area of the square
-        Returns: the size
-        """
-
-        return (self.__size ** 2)
+        return (self.__size) ** 2
