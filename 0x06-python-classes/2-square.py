@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 
-# 0-square.py by Leonard Odoi
 """This module that defines a square """
 
 
