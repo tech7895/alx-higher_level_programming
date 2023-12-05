@@ -1,17 +1,9 @@
 #!/usr/bin/python3
+"""Module containing inherits_from method"""
 
 
-"""This defines a file-writing function."""
-
-
-def write_file(filename="", text=""):
-    """Writes a string to a UTF8 text file
-
-    Args:
-        filename (str):  name of the file to write.
-        text (str): text to write to the file.
-    Returns:
-        The number of characters written.
-    """
-    with open(filename, "w", encoding="utf-8") as f:
-        return f.write(text)
+def inherits_from(obj, a_class):
+    """returns True if the object is an instance of a class that
+    inherited (directly or indirectly) from the specified class;
+    otherwise False"""
+    return isinstance(obj, a_class) and type(obj) != a_class
